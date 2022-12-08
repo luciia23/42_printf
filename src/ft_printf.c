@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/08 10:21:11 by lcollado          #+#    #+#             */
+/*   Updated: 2022/12/08 10:25:34 by lcollado         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
+#include <stdio.h>
 
 int ft_printf(const char *format, ...)
 {
@@ -15,4 +28,10 @@ int ft_printf(const char *format, ...)
     //Unsuccesful return --> a negative value is returned
     return (count);
 
+}
+
+int main()
+{
+    printf("%s","hola");
+    return (0);
 }
