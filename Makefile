@@ -6,7 +6,7 @@
 #    By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 10:21:22 by lcollado          #+#    #+#              #
-#    Updated: 2022/12/08 10:21:22 by lcollado         ###   ########.fr        #
+#    Updated: 2022/12/08 11:35:39 by lcollado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME = libftprintf.a
 
 FLAGS = -Wall -Wextra -Werror
-INCLUDE = -I ./include
+INCLUDE = -I./include
 CC = gcc $(FLAGS) $(INCLUDE)
 # -I se utiliza para especificar un directorio adicional donde Make debe buscar 
 #archivos de cabecera al momento de compilar un programa

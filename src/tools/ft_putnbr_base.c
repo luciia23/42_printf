@@ -6,11 +6,11 @@
 /*   By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 10:21:42 by lcollado          #+#    #+#             */
-/*   Updated: 2022/12/08 10:21:43 by lcollado         ###   ########.fr       */
+/*   Updated: 2022/12/08 11:55:08 by lcollado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tools.h"
+#include "../include/tools.h"
 
 int ft_putnbr_base(int nbr, char *base)
 {
@@ -39,4 +39,9 @@ int ft_putnbr_base(int nbr, char *base)
     }
 
     return count;
+}
+
+int main()
+{
+    //gcc ft_printf.c ft_formatprint.c ../libftprintf.a
 }
