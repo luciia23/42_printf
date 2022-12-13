@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tools.h                                            :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 10:21:29 by lcollado          #+#    #+#             */
-/*   Updated: 2022/12/08 10:35:02 by lcollado         ###   ########.fr       */
+/*   Created: 2022/12/08 10:21:18 by lcollado          #+#    #+#             */
+/*   Updated: 2022/12/13 19:18:29 by lcollado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TOOLS_H
-# define TOOLS_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include "ft_printf.h"
+#include <stdarg.h> // va_list
+#include <unistd.h> // write
+#include <stddef.h>
 
-size_t  ft_strlen(const char *str);
-int     ft_putstr(char *s);
-int     ft_putchar(char c);
-int     ft_puthex_ptr(void *ptr, char *base);
-int     ft_putnbr_base(int nbr, char *base);
-int     ft_putunsnbr(unsigned int n, char *base);
+#define DECIMAL "0123456789"
+#define HEX_LOWER "0123456789abcdef"
+#define HEX_UPPER "0123456789ABCDEF"
+
+#include "tools.h"
+
+enum typeParam
+{
+    LONG,
+    UNS
+};
+
+int ft_printf(const char *format, ...);
+int ft_formatprint(const char *s, va_list args);
 
 #endif
+

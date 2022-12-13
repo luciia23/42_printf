@@ -6,11 +6,11 @@
 /*   By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 10:21:11 by lcollado          #+#    #+#             */
-/*   Updated: 2022/12/08 11:52:57 by lcollado         ###   ########.fr       */
+/*   Updated: 2022/12/09 16:11:17 by lcollado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "ft_printf.h"
 #include <stdio.h>
 
 int ft_printf(const char *format, ...)
@@ -30,9 +30,3 @@ int ft_printf(const char *format, ...)
 
 }
 
-int main()
-{
-    ft_printf("%d\n", ft_printf("%d\n", 12354));
-    printf("%d\n", printf("%d\n",12354));
-    return (0);
-}

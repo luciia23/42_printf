@@ -1,42 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 10:21:42 by lcollado          #+#    #+#             */
-/*   Updated: 2022/12/13 19:21:01 by lcollado         ###   ########.fr       */
+/*   Created: 2022/12/13 16:50:14 by lcollado          #+#    #+#             */
+/*   Updated: 2022/12/13 18:02:55 by lcollado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tools.h"
 
-int ft_putnbr_base(int nbr, char *base)
+int ft_puthex(unsigned int nbr, char *base)
 {
     int base_len;
     int count;
+    char    buffer[100];
+    int i;
 
     base_len = ft_strlen(base);
     count = 0;
-    if (nbr < 0)
+    i = 0;
+    if (nbr == 0)
+        count += ft_putchar('0');
+    while (nbr > 0)
     {
-        count = ft_putchar('-');
-        nbr = nbr * (-1);
+        buffer[i] = base[nbr % base_len];
+        nbr /= base_len;
+        i++;
     }
-    if (nbr < base_len)
-        count += ft_putchar(base[nbr]);
-    if (nbr >= base_len)
-    {
-        count += ft_putnbr_base(nbr / base_len, base);
-		count += ft_putnbr_base(nbr % base_len, base);
-    }
-    // while (nbr > 0)
-    // {
-    //     count += ft_putchar(base[nbr % base_len]);
-    //     nbr /= base_len;
-    // }
-
-    return count;
+    while (--i >= 0)
+        count += ft_putchar(buffer[i]);
+    return (count);
 }
-
