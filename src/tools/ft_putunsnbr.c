@@ -6,39 +6,30 @@
 /*   By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 10:21:49 by lcollado          #+#    #+#             */
-/*   Updated: 2022/12/13 18:48:29 by lcollado         ###   ########.fr       */
+/*   Updated: 2023/01/04 15:10:29 by lcollado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tools.h"
 
-int ft_putunsnbr(unsigned int nbr, char *base)
+int ft_putunsnbr(unsigned int nbr, char *base, int count)
 {
-    unsigned int base_len;
-    int count;
+    int base_len;
+    char    buffer[100];
     int i;
-    char aux[100];
-    base_len = ft_strlen(base);
-    count = 0;
 
+    base_len = ft_strlen(base);
     i = 0;
+    nbr = (unsigned long)nbr;
     if (nbr == 0)
-        count = ft_putchar('0');
+        count += ft_putchar('0');
     while (nbr > 0)
     {
-        aux[i] = base[nbr % base_len];
+        buffer[i] = base[nbr % base_len];
         nbr /= base_len;
         i++;
     }
-    while (--i > 0)
-        count += ft_putchar(aux[i]);
-    // if (nbr < base_len)
-    //     count += ft_putchar(base[nbr]);
-    // if (nbr >= base_len)
-    // {
-    //     count += ft_putunsnbr(nbr / base_len, base);
-	// 	count += ft_putunsnbr(nbr % base_len, base);
-    // }
-
-    return count;
+    while (--i >= 0)
+        count += ft_putchar(buffer[i]);
+    return (count);
 }

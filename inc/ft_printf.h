@@ -6,7 +6,7 @@
 /*   By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 10:21:18 by lcollado          #+#    #+#             */
-/*   Updated: 2022/12/13 19:18:29 by lcollado         ###   ########.fr       */
+/*   Updated: 2023/01/04 14:34:16 by lcollado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 #include "tools.h"
 
-enum typeParam
+enum TypeParam
 {
     LONG,
     UNS

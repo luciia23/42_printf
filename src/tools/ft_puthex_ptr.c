@@ -6,7 +6,7 @@
 /*   By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 10:21:38 by lcollado          #+#    #+#             */
-/*   Updated: 2022/12/13 18:39:01 by lcollado         ###   ########.fr       */
+/*   Updated: 2023/01/04 14:48:04 by lcollado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,16 @@ int ft_putptr(unsigned long nbr, char *base, int count)
 
 int ft_puthex_ptr(void *ptr, char *base)
 {
-    unsigned long   nbr;
+    unsigned int   nbr;
     int             count;
 
-    nbr = (unsigned long)ptr;
+    nbr = (unsigned int)ptr;
     count = 0;
     count += write(1, "0x", 2);
 
     if (!nbr)
         count += ft_putchar('0');
     else
-        count = ft_putptr(nbr, base, count);
+        count = ft_putunsnbr(nbr, base, count);
     return (count);
 }
