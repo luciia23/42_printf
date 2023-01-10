@@ -6,13 +6,13 @@
 /*   By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 10:21:38 by lcollado          #+#    #+#             */
-/*   Updated: 2023/01/04 14:48:04 by lcollado         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:17:11 by lcollado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tools.h"
 
-int ft_putptr(unsigned long nbr, char *base, int count)
+int ft_putunsnbr(unsigned long nbr, char *base, int count)
 {
     int base_len;
     char    buffer[100];
@@ -35,10 +35,10 @@ int ft_putptr(unsigned long nbr, char *base, int count)
 
 int ft_puthex_ptr(void *ptr, char *base)
 {
-    unsigned int   nbr;
+    unsigned long   nbr;
     int             count;
 
-    nbr = (unsigned int)ptr;
+    nbr = (unsigned long)ptr;
     count = 0;
     count += write(1, "0x", 2);
 

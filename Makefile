@@ -6,7 +6,7 @@
 #    By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/08 10:21:22 by lcollado          #+#    #+#              #
-#    Updated: 2023/01/04 13:21:45 by lcollado         ###   ########.fr        #
+#    Updated: 2023/01/10 17:16:04 by lcollado         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ SRC_TOOLS = ft_putchar.c \
 			ft_puthex_ptr.c \
 			ft_putnbr_base.c \
 			ft_putstr.c \
-			ft_putunsnbr.c \
 			ft_strlen.c 
 
 SRCS = ${SRC_TOOLS:%=$(DIR_TOOLS)/%} \

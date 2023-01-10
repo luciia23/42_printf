@@ -6,7 +6,7 @@
 /*   By: lcollado <lcollado@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 10:21:18 by lcollado          #+#    #+#             */
-/*   Updated: 2023/01/04 14:34:16 by lcollado         ###   ########.fr       */
+/*   Updated: 2023/01/10 17:16:45 by lcollado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,6 @@
 #define HEX_UPPER "0123456789ABCDEF"
 
 #include "tools.h"
-
-enum TypeParam
-{
-    LONG,
-    UNS
-};
 
 int ft_printf(const char *format, ...);
 int ft_formatprint(const char *s, va_list args);
